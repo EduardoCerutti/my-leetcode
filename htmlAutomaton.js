@@ -57,24 +57,25 @@ function checkTags(str) {
 
 function intersperse(str) {
   const token = "igh5czfue2"
-  let answer = []
+  let interspersedString = []
 
   const biggestWordSize = token.length > str.length ? token.length : str.length
 
   for (let i = 0; i < biggestWordSize; i++) {
-    if (str[i]) answer.push(str[i])
-    if (token[i]) answer.push(token[i])
+    if (str[i]) interspersedString.push(str[i])
+    if (token[i]) interspersedString.push(token[i])
   }
 
-  return answer.join("")
+  return interspersedString.join("")
 }
 
 function StringChallenge(str) {
-  let answer = checkTags(str)
+  let checkedString = checkTags(str)
 
-  if (answer !== "true") answer = answer.substring(1, answer.length - 1)
+  if (checkedString !== "true")
+    checkedString = checkedString.substring(1, checkedString.length - 1)
 
-  return intersperse(answer)
+  return intersperse(checkedString)
 }
 
 // keep this function call here
