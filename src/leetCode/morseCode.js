@@ -1,6 +1,6 @@
 //dado o input "...." o retorno precisa ser ["--..", ".--.", "..--"]
 
-var changeMorsecode = function (morsecode) {
+function changeMorsecode(morsecode) {
   var res = []
 
   return res

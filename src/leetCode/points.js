@@ -3,7 +3,7 @@
 // quando for D multiplicar o ultimo numero por 2
 // quando for C remover o ultimo item do array
 
-var callPoints = function (ops) {
+function callPoints(ops) {
   var result = []
 
   ops.map((operation) => {
