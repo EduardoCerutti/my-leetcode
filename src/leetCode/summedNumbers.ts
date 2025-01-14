@@ -25,12 +25,15 @@ console.log(sumOfSortedArray([1, 2, 4, 4], 8))
 
 // but what if the array isn't sorted ?
 
-// I think it's O(n²) because I have a find (O(n)) inside forEach (O(n))
+// this is also linear O(n)
 const sumOfNotSortedArray = (array: number[], sum: number) => {
+  const seen = new Set<number>()
+
   array.forEach((element) => {
     const neededValue = element - sum
 
-    if (array.find((value) => value === neededValue)) return true
+    if (seen.has(neededValue)) return true
+    seen.add(element)
   })
 
   return false
