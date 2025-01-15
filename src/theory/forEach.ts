@@ -1,5 +1,5 @@
-const numbers = [1, 2, 3, 4]
-
-numbers.forEach((number: number) => {
-  console.log(number)
-})
+export function forEach(array: number[] | string[]) {
+  array.forEach((element: number | string) => {
+    console.log(element)
+  })
+}
