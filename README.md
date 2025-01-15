@@ -14,3 +14,19 @@ nvm use 23.6.0
 
 node src/leetCode/summedNumbers.ts
 ```
+
+## Tests
+
+```sh
+# To work with jest tests you should install the packages
+
+npm i
+
+# Then you'll be able to run all tests
+
+npm test
+
+# Or just a single test
+
+npm run test:specific -- 'should log the array'
+```
