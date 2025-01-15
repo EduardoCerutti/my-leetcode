@@ -1,6 +1,6 @@
 import { forEach } from "./forEach"
 
-test("forEach log the array", () => {
+test("should log the array", () => {
   const consoleLogSpy = jest.spyOn(console, "log").mockImplementation(() => {})
 
   forEach([1, 2, 3, 4])
