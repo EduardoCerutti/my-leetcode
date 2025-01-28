@@ -17,11 +17,12 @@
 
 // Your ChallengeToken: igh5czfue2
 
-function checkTags(str) {
+// Time complexity: O(n²)
+function checkTags(str: string) {
   const openingTags = ["<b>", "<i>", "<em>", "<div>", "<p>"]
   const closingTags = ["</b>", "</i>", "</em>", "</div>", "</p>"]
 
-  let stack = []
+  let stack: string[] = []
 
   for (let i = 0; i < str.length; i++) {
     if (str[i] === "<") {
@@ -55,9 +56,9 @@ function checkTags(str) {
   return "true"
 }
 
-function intersperse(str) {
+function intersperse(str: string) {
   const token = "igh5czfue2"
-  let interspersedString = []
+  let interspersedString: string[] = []
 
   const biggestWordSize = token.length > str.length ? token.length : str.length
 
@@ -69,7 +70,7 @@ function intersperse(str) {
   return interspersedString.join("")
 }
 
-function StringChallenge(str) {
+export function stringChallenge(str: string) {
   let checkedString = checkTags(str)
 
   if (checkedString !== "true")
@@ -77,6 +78,3 @@ function StringChallenge(str) {
 
   return intersperse(checkedString)
 }
-
-// keep this function call here
-console.log(StringChallenge("<div><i>hello</i>world</b>"))
