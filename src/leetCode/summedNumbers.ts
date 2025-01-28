@@ -1,6 +1,6 @@
-// but what if the array isn't sorted ?
+// But what if the array isn't sorted ?
 
-// this is also linear O(n)
+// Time complexity: O(n)
 export const summedNumbers = (array: number[], sum: number) => {
   const seen = new Set<number>()
 

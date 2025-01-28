@@ -1,6 +1,7 @@
 //dado o input "...." o retorno precisa ser ["--..", ".--.", "..--"]
 
-function changeMorsecode(morsecode) {
+// Time complexity:
+function changeMorsecode(morsecode: string) {
   var res = []
 
   return res

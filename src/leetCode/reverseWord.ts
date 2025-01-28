@@ -1,4 +1,4 @@
-// this is o(n)
+// Time complexity: O(n)
 export function reverseWord(string: string) {
   let newWord = ""
 
