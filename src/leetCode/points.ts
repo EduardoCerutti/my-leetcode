@@ -3,26 +3,25 @@
 // quando for D multiplicar o ultimo numero por 2
 // quando for C remover o ultimo item do array
 
-function callPoints(ops) {
-  var result = []
+// the time complexity is O(n)
+export function points(ops: Array<number | string>) {
+  var result: number[] = []
 
-  ops.map((operation) => {
+  ops.map((operation: string | number) => {
     switch (operation) {
       case "+":
-        result.push(result.at(-1) + result.at(-2))
+        result.length >= 2 && result.push(result.at(-1)! + result.at(-2)!)
         break
       case "D":
-        result.push(result.at(-1) * 2)
+        result.length >= 1 && result.push(result.at(-1)! * 2)
         break
       case "C":
         result.pop()
         break
       default:
-        result.push(operation)
+        typeof operation === "number" && result.push(operation)
     }
   })
 
   return result
 }
-
-console.log(callPoints([5, 2, "C", "D", "+"]))
