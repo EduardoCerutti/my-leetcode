@@ -8,3 +8,9 @@ export function reverseWord(string: string) {
 
   return newWord
 }
+
+export function reverseWord2(string: string) {
+  return string.split("").reverse().join("")
+}
+
+export const reverseWord3 = (string: string) => [...string].reverse().join("")
