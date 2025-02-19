@@ -1,5 +1,5 @@
 import { morseCode } from "./morseCode"
 
-test('morseCode should return ["--..", ".--.", "..--"]', () => {
+test('It should return "--..", ".--.", "..--" from "...."', () => {
   expect(morseCode("....")).toEqual(["--..", ".--.", "..--"])
 })
