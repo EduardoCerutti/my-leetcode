@@ -1,5 +1,5 @@
 import { replaceTags } from "./replaceTags"
 
-test("replaceTags should replace chars </>", () => {
+test("It should replace chars </> and return tag name only", () => {
   expect(replaceTags("</div>")).toBe("div")
 })

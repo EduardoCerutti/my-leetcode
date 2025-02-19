@@ -1,5 +1,5 @@
 import { removingStars } from "./removingStars"
 
-test("removingStars should return lecoe", () => {
+test('It should return "lecoe" from "leet**cod*e"', () => {
   expect(removingStars("leet**cod*e")).toBe("lecoe")
 })
