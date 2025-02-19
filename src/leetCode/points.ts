@@ -5,7 +5,7 @@
 
 // The time complexity: O(n)
 export function points(ops: Array<number | string>) {
-  var result: number[] = []
+  const result: number[] = []
 
   ops.map((operation: string | number) => {
     switch (operation) {
