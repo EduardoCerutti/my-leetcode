@@ -1,11 +1,9 @@
-// toda vez que encontrar dois pontos um seguido do outro deve trocar os pontos
-// por dois traços, exemplo: "...." o retorno precisa ser ["--..", ".--.", "..--"]
+// Every time two consecutive dots are found, they should be replaced with two
+// dashes. Example: "...." should return ["--..", ".--.", "..--"].
 
 // Time complexity:
-function changeMorsecode(morsecode: string) {
+export function morseCode(morsecode: string) {
   var res = []
 
   return res
 }
-
-console.log(changeMorsecode("...."))
