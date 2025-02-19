@@ -1,6 +1,7 @@
 // Given an array [-2,1,-3,4,-1,2,1,-5,4] it should return 6 because that's the
 // biggest sum it can get sequentialy adding this subarray [4,-1,2,1]
 
+// Time complexity:
 export function maximumSubarray(arr: number[]) {
   let sum = 0
 
