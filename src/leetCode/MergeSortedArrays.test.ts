@@ -1,4 +1,4 @@
-import { mergeSortedArrays } from "./mergeSortedArrays"
+import { mergeSortedArrays } from "./MergeSortedArrays"
 
 test("It should merge the arrays and keep it sorted returning [ 1, 3, 5, 6, 7, 8, 9]", () => {
   expect(mergeSortedArrays([1, 5, 8, 9], [3, 6, 7])).toEqual([

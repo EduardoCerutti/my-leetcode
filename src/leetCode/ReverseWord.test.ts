@@ -1,4 +1,4 @@
-import { reverseWord, reverseWord2, reverseWord3 } from "./reverseWord"
+import { reverseWord, reverseWord2, reverseWord3 } from "./ReverseWord"
 
 test('It should revert the word "awsome" and return', () => {
   expect(reverseWord("awsome")).toBe("emoswa")

@@ -1,4 +1,4 @@
-import { summedNumbers } from "./summedNumbers"
+import { summedNumbers } from "./SummedNumbers"
 
 test("It should return true because 9 is a possible sum inside [5, 2, 6, 4]", () => {
   expect(summedNumbers([5, 2, 6, 4], 9)).toBe(true)

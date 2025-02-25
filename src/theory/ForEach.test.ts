@@ -1,4 +1,4 @@
-import { forEach } from "./forEach"
+import { forEach } from "./ForEach"
 
 test("for each should log the array", () => {
   const consoleLogSpy = jest.spyOn(console, "log").mockImplementation(() => {})
