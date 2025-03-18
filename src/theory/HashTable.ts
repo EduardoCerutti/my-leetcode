@@ -22,7 +22,7 @@ class HashTable {
 
     if (!this.data[address]) this.data[address] = []
 
-    this.data[address].push([key, value])
+    return this.data[address].push([key, value])
   }
 
   // Time complexity: O(n)
@@ -42,12 +42,15 @@ class HashTable {
   // Time complexity: O(n)
   public delete(key: string) {
     let address = this.hash(key)
+    let currentBucket = this.data[address]
 
-    for (let i = 0; i < this.data[address].length; i++) {
-      if (this.data[address][i] === key) this.data[address][i] = undefined
+    if (!currentBucket) return undefined
+
+    for (let i = 0; i < currentBucket.length; i++) {
+      if (currentBucket[i][0] === key) return currentBucket.splice(i, 1)
     }
 
-    return this.data
+    return undefined
   }
 
   // Time complexity: O(n)

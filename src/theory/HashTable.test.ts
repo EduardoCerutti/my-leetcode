@@ -15,10 +15,8 @@ describe("HashTable", () => {
   })
 
   test("It should delete Airsoft from HashTable", () => {
-    expect(hashTable.delete("Airsoft")).toEqual([
-      ["Music", "Rock and Roll"],
-      ["Code", "Typescript"],
-    ])
+    expect(hashTable.delete("Airsoft")).toEqual([["Airsoft", "Assault"]])
+    expect(hashTable.get("Airsoft")).toBe(undefined)
   })
 
   test("It should return all keys inside HashTable", () => {
