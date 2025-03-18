@@ -5,7 +5,7 @@ class HashTable {
     this.data = new Array(size)
   }
 
-  // Time complexity: O(1)
+  // Time complexity: O(n)
   private hash(key: string) {
     let hash = 0
 
