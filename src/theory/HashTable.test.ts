@@ -14,9 +14,8 @@ describe("HashTable", () => {
     expect(hashTable.get("Music")).toBe("Rock and Roll")
   })
 
-  test("It should return all data inside HashTable", () => {
-    expect(hashTable.all()).toEqual([
-      ["Airsoft", "Assault"],
+  test("It should delete Airsoft from HashTable", () => {
+    expect(hashTable.delete("Airsoft")).toEqual([
       ["Music", "Rock and Roll"],
       ["Code", "Typescript"],
     ])

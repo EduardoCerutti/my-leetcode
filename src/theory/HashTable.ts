@@ -40,22 +40,14 @@ class HashTable {
   }
 
   // Time complexity: O(n)
-  public all() {
-    const dataArray = []
+  public delete(key: string) {
+    let address = this.hash(key)
 
-    for (let i = 0; i < this.data.length; i++) {
-      if (this.data[i]) {
-        if (this.data[i].length > 1) {
-          for (let j = 0; j < this.data[i].length; j++) {
-            dataArray.push(this.data[i][j])
-          }
-        } else {
-          dataArray.push(this.data[i][0])
-        }
-      }
+    for (let i = 0; i < this.data[address].length; i++) {
+      if (this.data[address][i] === key) this.data[address][i] = undefined
     }
 
-    return dataArray
+    return this.data
   }
 
   // Time complexity: O(n)
