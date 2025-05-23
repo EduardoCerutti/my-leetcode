@@ -51,21 +51,27 @@ class LinkedList {
 
     if (position >= this.length) return this.append(value)
 
-    let currentNode = this.head
-
-    for (let i = 0; i < position - 1; i++) {
-      currentNode = currentNode.next
-    }
+    const previousNode = this.getNode(position - 1)
 
     const newNode = new Node(value)
 
-    const temp = currentNode.next
-    currentNode.next = newNode
-    newNode.next = temp
+    const nextNode = previousNode.next
+    previousNode.next = newNode
+    newNode.next = nextNode
 
     this.length++
 
     return this
+  }
+
+  getNode(index: number) {
+    let currentNode = this.head
+
+    for (let i = 0; i < index; i++) {
+      currentNode = currentNode.next
+    }
+
+    return currentNode
   }
 
   getHead() {
