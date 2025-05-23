@@ -26,6 +26,7 @@ class LinkedList {
     this.length = 1
   }
 
+  //Time complexity: O(1)
   prepend(value: allowedValues) {
     const newNode = new Node(value)
 
@@ -36,6 +37,7 @@ class LinkedList {
     return this
   }
 
+  //Time complexity: O(1)
   append(value: allowedValues) {
     const newNode = new Node(value)
 
@@ -46,12 +48,13 @@ class LinkedList {
     return this
   }
 
-  insert(position: number, value: allowedValues) {
-    if (position === 0) return this.prepend(value)
+  //Time complexity: O(n)
+  insert(index: number, value: allowedValues) {
+    if (index === 0) return this.prepend(value)
 
-    if (position >= this.length) return this.append(value)
+    if (index >= this.length) return this.append(value)
 
-    const previousNode = this.getNode(position - 1)
+    const previousNode = this.getNode(index - 1)
 
     const newNode = new Node(value)
 
@@ -64,6 +67,7 @@ class LinkedList {
     return this
   }
 
+  //Time complexity: O(n)
   getNode(index: number) {
     let currentNode = this.head
 
