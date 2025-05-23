@@ -22,11 +22,19 @@ describe("LinkedList", () => {
     expect(linkedList.getTail()).toEqual({ value: 20, next: null })
   })
 
-  test("It should insert a new node at the position 1 of the list", () => {
+  test("It should insert a new node at the position 2 of the list", () => {
     linkedList.insert(2, 12)
     expect(linkedList.getHead()).toEqual({
       value: 5,
       next: { value: 10, next: { value: 12, next: { value: 15, next: null } } },
+    })
+  })
+
+  test("It should remove a node at the position 1 of the list", () => {
+    linkedList.remove(1)
+    expect(linkedList.getHead()).toEqual({
+      value: 5,
+      next: { value: 15, next: null },
     })
   })
 })

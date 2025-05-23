@@ -68,6 +68,22 @@ class LinkedList {
   }
 
   //Time complexity: O(n)
+  remove(index: number) {
+    if (index === 0) {
+      this.head = this.head.next
+      this.length--
+      return this
+    }
+
+    const previousNode = this.getNode(index - 1)
+    previousNode.next = previousNode.next.next
+
+    this.length--
+
+    return this
+  }
+
+  //Time complexity: O(n)
   getNode(index: number) {
     let currentNode = this.head
 
