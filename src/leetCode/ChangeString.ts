@@ -6,19 +6,17 @@
 // the last letter is to use in the instruction
 // I = insert, D = delete, R = replace
 
+// Space complexity: O(n + m)
+// Time complexity: O(n + m²)
 export function changeString(str: string, instrictions: [string]) {
   let newString = str.split("")
 
   for (const instruction of instrictions) {
-    const actionInfo = instruction.split(" ")
+    const [action, position, char] = instruction.split(" ")
 
-    const action = actionInfo[0]
-    const position = Number(actionInfo[1])
-    const char = actionInfo?.[2]
-
-    if (action === "I") newString.splice(position, 0, char)
-    if (action === "R") newString.splice(position, 1, char)
-    if (action === "D") newString.splice(position, 1)
+    if (action === "I") newString.splice(Number(position), 0, char)
+    if (action === "R") newString.splice(Number(position), 1, char)
+    if (action === "D") newString.splice(Number(position), 1)
   }
 
   return newString.join("")
