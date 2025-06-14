@@ -1,11 +1,7 @@
-type allowedValues = number | string | boolean
+import { allowedValues } from "../models/AllowedValues"
+import { listNode } from "../models/ListNode"
 
-export type listNode = {
-  value: allowedValues
-  next: listNode | null
-}
-
-class Node implements listNode {
+export class Node implements listNode {
   value: allowedValues
   next: listNode | null
 
