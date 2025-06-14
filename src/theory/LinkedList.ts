@@ -1,6 +1,6 @@
 type allowedValues = number | string | boolean
 
-type listNode = {
+export type listNode = {
   value: allowedValues
   next: listNode | null
 }
