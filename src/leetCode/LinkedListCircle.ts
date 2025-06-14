@@ -6,7 +6,8 @@
 // to (0-indexed). It is -1 if there is no cycle. Note that pos is not passed
 // as a parameter.
 // Example: Input: head = [3,2,0,-4] but the .next of position 3 is position 1
-// So it should return position 1 listNode
+// So it should return position 1 listNode.
+// https://leetcode.com/problems/linked-list-cycle-ii/description/
 
 // Space complexity: O(n)
 // Time complexity: O(n)
