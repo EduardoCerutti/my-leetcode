@@ -1,7 +1,7 @@
-// quando for numero adicionar no array
-// quando for + somar os 2 ultimos numeros no array
-// quando for D multiplicar o ultimo numero por 2
-// quando for C remover o ultimo item do array
+// when it's a number, add it to the array
+// when it's +, sum the last two numbers in the array
+// when it's D, multiply the last number by 2
+// when it's C, remove the last item from the array
 
 // Space complexity: O(n)
 // Time complexity: O(n)
