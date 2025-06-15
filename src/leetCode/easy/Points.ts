@@ -3,7 +3,8 @@
 // quando for D multiplicar o ultimo numero por 2
 // quando for C remover o ultimo item do array
 
-// The time complexity: O(n)
+// Space complexity: O(n)
+// Time complexity: O(n)
 export function points(ops: Array<number | string>) {
   const result: number[] = []
 

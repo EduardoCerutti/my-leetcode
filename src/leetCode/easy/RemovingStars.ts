@@ -1,6 +1,7 @@
 // You'll receive a string that has *, when a * is found you should remove it and
 // the closest left char, example "leet**cod*e" should return lecoe
 
+// Space complexity: O(n)
 // Time complexity: O(n)
 export function removingStars(str: string) {
   const newWord = []

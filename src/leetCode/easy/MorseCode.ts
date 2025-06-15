@@ -1,7 +1,8 @@
 // Every time two consecutive dots are found, they should be replaced with two
 // dashes. Example: "...." should return ["--..", ".--.", "..--"].
 
-// Time complexity: O(n)
+// Space complexity: O(n²)
+// Time complexity: O(n²)
 export function morseCode(str: string) {
   const res = []
   const strArray = str.split("")

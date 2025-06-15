@@ -1,5 +1,6 @@
 // But what if the array isn't sorted ?
 
+// Space complexity: O(n)
 // Time complexity: O(n)
 export const summedNumbers = (array: number[], sum: number) => {
   const seen = new Set<number>()

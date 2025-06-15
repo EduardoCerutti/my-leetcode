@@ -11,7 +11,7 @@
 
 // Space complexity: O(n)
 // Time complexity: O(n)
-import { listNode } from "../models/ListNode"
+import { listNode } from "../../models/ListNode"
 
 export function detectCycle(head: listNode) {
   let current = head

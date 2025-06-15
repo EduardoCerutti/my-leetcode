@@ -1,5 +1,5 @@
-import { allowedValues } from "../models/AllowedValues"
-import { Node } from "../theory/LinkedList"
+import { allowedValues } from "../../models/AllowedValues"
+import { Node } from "../../theory/LinkedList"
 import { detectCycle } from "./LinkedListCircle"
 
 test("It should detect a cycle at index 9 in linked list", () => {

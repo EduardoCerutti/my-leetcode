@@ -3,6 +3,7 @@
 // Find two numbers in the array [1, 2, 4, 4] that summed becomes 8, the array
 // is always sorted
 
+// Space complexity: O(1)
 // Time complexity: O(n)
 export const sortedSummedNumbers = (array: number[], sum: number) => {
   let low = 0
