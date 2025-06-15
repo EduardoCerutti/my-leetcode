@@ -84,6 +84,25 @@ class LinkedList {
     return this
   }
 
+  reverse() {
+    let prev: listNode | null = null
+    let current: listNode | null = this.head
+    let next: listNode | null = null
+
+    this.tail = this.head
+
+    while (current) {
+      next = current.next
+      current.next = prev
+      prev = current
+      current = next
+    }
+
+    this.head = prev
+
+    return this
+  }
+
   //Time complexity: O(n)
   getNode(index: number) {
     if (index < 0 || index >= this.length)

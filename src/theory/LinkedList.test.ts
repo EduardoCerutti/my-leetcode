@@ -37,4 +37,12 @@ describe("LinkedList", () => {
       next: { value: 15, next: null },
     })
   })
+
+  test("It should revert the list", () => {
+    linkedList.reverse()
+    expect(linkedList.getHead()).toEqual({
+      value: 15,
+      next: { value: 10, next: { value: 5, next: null } },
+    })
+  })
 })
