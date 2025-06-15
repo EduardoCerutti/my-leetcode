@@ -5,7 +5,9 @@ class HashTable {
     this.data = new Array(size)
   }
 
-  // Time complexity: O(n)
+  // Space complexity: O(1)
+  // Time complexity (avg): O(n)
+  // Time complexity (worst): O(n)
   private hash(key: string) {
     let hash = 0
 
@@ -16,7 +18,9 @@ class HashTable {
     return hash
   }
 
-  // Time complexity: O(1)
+  // Space complexity: O(1)
+  // Time complexity (avg): O(1)
+  // Time complexity (worst): O(n)
   public set(key: string, value: any) {
     let address = this.hash(key)
 
@@ -25,7 +29,9 @@ class HashTable {
     return this.data[address].push([key, value])
   }
 
-  // Time complexity: O(n)
+  // Space complexity: O(1)
+  // Time complexity (avg): O(1)
+  // Time complexity (worst): O(n)
   public get(key: string) {
     let address = this.hash(key)
     const currentBucket = this.data[address]
@@ -39,7 +45,9 @@ class HashTable {
     return undefined
   }
 
-  // Time complexity: O(n)
+  // Space complexity: O(1)
+  // Time complexity (avg): O(1)
+  // Time complexity (worst): O(n)
   public delete(key: string) {
     let address = this.hash(key)
     let currentBucket = this.data[address]
@@ -53,7 +61,9 @@ class HashTable {
     return undefined
   }
 
-  // Time complexity: O(n)
+  // Space complexity: O(n)
+  // Time complexity (avg): O(n)
+  // Time complexity (worst): O(n)
   public keys() {
     const keysArray = []
 
@@ -72,7 +82,9 @@ class HashTable {
     return keysArray
   }
 
-  // Time complexity: O(n)
+  // Space complexity: O(n)
+  // Time complexity (avg): O(n)
+  // Time complexity (worst): O(n)
   public values() {
     const valuesArray = []
 

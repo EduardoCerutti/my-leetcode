@@ -22,7 +22,8 @@ class LinkedList {
     this.length = 1
   }
 
-  //Time complexity: O(1)
+  // Space complexity: O(1)
+  // Time complexity: O(1)
   prepend(value: allowedValues) {
     const newNode = new Node(value)
 
@@ -33,7 +34,8 @@ class LinkedList {
     return this
   }
 
-  //Time complexity: O(1)
+  // Space complexity: O(1)
+  // Time complexity: O(1)
   append(value: allowedValues) {
     const newNode = new Node(value)
 
@@ -44,7 +46,8 @@ class LinkedList {
     return this
   }
 
-  //Time complexity: O(n)
+  // Space complexity: O(1)
+  // Time complexity: O(n)
   insert(index: number, value: allowedValues) {
     if (index === 0) return this.prepend(value)
 
@@ -63,7 +66,8 @@ class LinkedList {
     return this
   }
 
-  //Time complexity: O(n)
+  // Space complexity: O(1)
+  // Time complexity: O(n)
   remove(index: number) {
     if (index === 0) {
       this.head = this.head.next
@@ -84,6 +88,8 @@ class LinkedList {
     return this
   }
 
+  // Space complexity: O(1)
+  // Time complexity: O(n)
   reverse() {
     let prev: listNode | null = null
     let current: listNode | null = this.head
@@ -103,7 +109,8 @@ class LinkedList {
     return this
   }
 
-  //Time complexity: O(n)
+  // Space complexity: O(1)
+  // Time complexity: O(n)
   getNode(index: number) {
     if (index < 0 || index >= this.length)
       throw new Error("Index out of bounds")
@@ -117,10 +124,14 @@ class LinkedList {
     return currentNode
   }
 
+  // Space complexity: O(1)
+  // Time complexity: O(1)
   getHead() {
     return this.head
   }
 
+  // Space complexity: O(1)
+  // Time complexity: O(1)
   getTail() {
     return this.tail
   }
