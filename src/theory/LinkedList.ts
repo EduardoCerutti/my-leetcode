@@ -72,6 +72,11 @@ class LinkedList {
     }
 
     const previousNode = this.getNode(index - 1)
+
+    if (!previousNode || !previousNode.next) {
+      throw new Error("Invalid index")
+    }
+
     previousNode.next = previousNode.next.next
 
     this.length--
@@ -81,6 +86,9 @@ class LinkedList {
 
   //Time complexity: O(n)
   getNode(index: number) {
+    if (index < 0 || index >= this.length)
+      throw new Error("Index out of bounds")
+
     let currentNode = this.head
 
     for (let i = 0; i < index; i++) {
