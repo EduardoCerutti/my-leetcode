@@ -95,7 +95,7 @@ class LinkedList {
     let current: listNode | null = this.head
     let next: listNode | null = null
 
-    this.tail = this.head
+    this.tail = current
 
     while (current) {
       next = current.next
