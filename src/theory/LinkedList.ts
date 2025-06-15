@@ -17,7 +17,7 @@ class LinkedList {
   protected length: number
 
   constructor(value: allowedValues) {
-    this.head = { value, next: null }
+    this.head = new Node(value)
     this.tail = this.head
     this.length = 1
   }
