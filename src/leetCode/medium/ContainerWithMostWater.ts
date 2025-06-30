@@ -6,6 +6,8 @@
 // In this case the max area will be 49 because if we select position 1 and 8
 // we will have 7 containers that has 7 max capacity in the middle
 
+// Space complexity: O(1)
+// Time complexity: O(n)
 export function containerWithMostWater(height: number[]) {
   let i = 0
   let j = height.length - 1
