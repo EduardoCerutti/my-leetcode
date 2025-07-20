@@ -5,8 +5,8 @@
 // is used to denote the index of the node that tail's next pointer is connected
 // to (0-indexed). It is -1 if there is no cycle. Note that pos is not passed
 // as a parameter.
-// Example: Input: head = [3,2,0,-4] but the .next of position 3 is position 1
-// So it should return position 1 listNode.
+// Example: Input: head = 3 -> 2 -> 0 -> -4 -> null but the .next of position 3
+// is position 1, so it should return position 1 listNode.
 // https://leetcode.com/problems/linked-list-cycle-ii/description/
 
 // Space complexity: O(n)
