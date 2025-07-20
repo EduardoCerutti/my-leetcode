@@ -9,7 +9,7 @@ test("It should return one list with the two ordered lists merged", () => {
   list2.append(10)
 
   expect(mergeSortedLinkedLists(list1.getHead(), list2.getHead())).toEqual({
-    next: { next: { next: { next: null, value: 10 }, value: 3 }, value: 2 },
     value: 0,
+    next: { value: 2, next: { value: 3, next: { value: 10, next: null } } },
   })
 })

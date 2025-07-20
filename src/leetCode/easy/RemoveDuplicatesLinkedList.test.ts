@@ -10,7 +10,7 @@ test("It should remove duplicates from the list", () => {
   }
 
   expect(removeDuplicatesLinkedList(linkedList.getHead())).toEqual({
-    next: { next: { next: null, value: 3 }, value: 2 },
     value: 1,
+    next: { value: 2, next: { value: 3, next: null } },
   })
 })
