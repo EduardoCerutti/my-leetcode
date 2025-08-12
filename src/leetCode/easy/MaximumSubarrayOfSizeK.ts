@@ -6,17 +6,15 @@
 // Space complexity: O(1)
 // Time complexity: O(n)
 export function maximumSubarrayOfSizeK(arr: number[], k: number) {
-  let j = k
-
   let maxValue = 0
   let windowValue = 0
 
-  for (let i = 0; i < j; i++) maxValue += arr[i]
+  for (let i = 0; i < k; i++) maxValue += arr[i]
 
   windowValue = maxValue
 
-  for (let i = 1; j < arr.length; i++, j++) {
-    windowValue += arr[j]
+  for (let i = 1; k < arr.length; i++, k++) {
+    windowValue += arr[k]
     windowValue -= arr[i - 1]
 
     if (windowValue > maxValue) maxValue = windowValue
